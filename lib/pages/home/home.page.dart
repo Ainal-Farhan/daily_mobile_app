@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               'You have pushed the button this many times:',
               style: TextStyle(
-                color: generalProvider.green,
+                color: generalProvider.mainDark1,
               ),
             ),
             Text(

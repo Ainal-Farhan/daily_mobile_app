@@ -1,0 +1,30 @@
+{
+    "food": {
+        "type": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "supper",
+            "late night snack"
+        ],
+        "price": 2.30,
+        "description": "",
+        "date": ""
+    },
+    "grocery": {
+        "type": "",
+        "price": 3.20,
+        "description": "",
+        "date": ""
+    },
+    "car": {
+        "type": [
+            "maintenance",
+            "parking",
+            "fuel"
+        ],
+        "price": 2.3,
+        "description": "",
+        "date": ""
+    }
+}

@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 
 class GeneralProvider extends ChangeNotifier {
   // colors
-  Color _green = const Color(0xff42aa45);
-  Color _darkgreen = const Color(0xff368738);
-  Color _lightgreen = const Color(0xff58cc5b);
-  Color _verylightgreen = const Color(0xff7dfa80);
-  Color _bgGreen = const Color(0xffdaffdb);
+  Color _main = const Color.fromRGBO(0, 255, 205, 1);
+  Color _mainDark1 = const Color.fromRGBO(0, 128, 102, 0.5);
+  Color _mainLight1 = const Color.fromRGBO(77, 255, 219, 1);
+  Color _mainDark2 = const Color.fromRGBO(38, 128, 110, 0.5);
+  Color _mainLight2 = const Color.fromRGBO(0, 204, 163, 0.8);
   MaterialColor _primarySwatch = Colors.green;
 
-  Color get green => _green;
-  Color get darkgreen => _darkgreen;
-  Color get lightgreen => _lightgreen;
-  Color get verylightgreen => _verylightgreen;
-  Color get bgGreen => _bgGreen;
+  Color get main => _main;
+  Color get mainDark1 => _mainDark1;
+  Color get mainLight1 => _mainLight1;
+  Color get mainDark2 => _mainDark2;
+  Color get mainLight2 => _mainLight2;
   MaterialColor get primarySwatch => _primarySwatch;
 
-  set green(color) => _green = color;
-  set darkgreen(color) => _darkgreen = color;
-  set lightgreen(color) => _lightgreen = color;
-  set verylightgreen(color) => _verylightgreen = color;
-  set bgGreen(color) => _bgGreen = color;
+  set main(color) => _main = color;
+  set mainDark1(color) => _mainDark1 = color;
+  set mainLight1(color) => _mainLight1 = color;
+  set mainDark2(color) => _mainDark2 = color;
+  set mainLight2(color) => _mainLight2 = color;
   set primarySwatch(color) => _primarySwatch = color;
 }

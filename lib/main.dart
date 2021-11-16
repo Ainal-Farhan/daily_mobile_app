@@ -6,26 +6,16 @@ import 'package:provider/provider.dart';
 import 'package:daily/providers/index.dart';
 import 'package:daily/pages/index.page.dart' as page_index;
 import 'package:path_provider/path_provider.dart' as path_provider;
-import 'package:daily/model/user/user.dart';
-import 'package:uuid/uuid.dart';
+import 'package:daily/model/expense/expense.dart' as expense;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   Directory directory = await path_provider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
-  Hive.registerAdapter(UserAdapter());
+  Hive.registerAdapter(expense.ExpenseAdapter());
 
   MainProvider mainProvider = MainProvider();
-
-  var box = await Hive.openBox('testBox');
-
-  // var usr = User(uuid: await generateUuid(box), name: "ainal", age: 22);
-  // await box.put(usr.uuid, usr);
-  // print(box.get(usr.uuid));
-  // print(usr.uuid);
-
-  print(box.toMap());
 
   runApp(
     MultiProvider(
@@ -35,18 +25,4 @@ Future<void> main() async {
       ),
     ),
   );
-}
-
-Future<String> generateUuid(box) async {
-  var uuid = const Uuid().v1();
-
-  if (!await checkUuidDuplicate(uuid, box)) {
-    uuid = await generateUuid(box);
-  }
-
-  return uuid;
-}
-
-Future<bool> checkUuidDuplicate(uuid, box) async {
-  return box.get(uuid) == null;
 }

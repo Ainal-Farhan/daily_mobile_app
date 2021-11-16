@@ -18,7 +18,8 @@ class MainPage extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: generalProvider.primarySwatch,
       ),
-      initialRoute: router.homePageRoute,
+      debugShowCheckedModeBanner: false,
+      initialRoute: router.addExpensePageRoute,
       onGenerateRoute: router.createRoute,
     );
   }
